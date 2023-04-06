@@ -18,7 +18,7 @@
 </head>
 <body>
 <div id="large-header" class="large-header">
-    <canvas id="demo-canvas"></canvas>
+    <canvas id="demo-canvas" style="z-index:-1; position: absolute; left: 0px; top: 0px;"></canvas>
     <div class="container">
         <h1 class="row main-title justify-content-center">Управление освещением</h1>
         <div class="accordion" id="accordionFirst">
@@ -150,20 +150,18 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <button id="switch-off-all" class="iphone-button red-button col-sm-7 col-lg-3 gy-5">ВЫКЛЮЧИТЬ СВЕТ ВЕЗДЕ</button>
-        </div>
+    </div>
+    <div class="row justify-content-center">
+        <button id="switch-off-all" class="iphone-button red-button col-sm-7 col-lg-3 gy-5" onclick="disableSwitches();">ВЫКЛЮЧИТЬ СВЕТ ВЕЗДЕ</button>
     </div>
 </div>
 <script>
-    const switches = document.querySelectorAll('.switch input[type="checkbox"]');
-    const switchOffAllButton = document.getElementById('switch-off-all');
-
-    switchOffAllButton.addEventListener('click', function () {
+    function disableSwitches(){
+        const switches = document.querySelectorAll('.switch input[type="checkbox"]');
         switches.forEach(function (switchEl) {
             switchEl.checked = false;
         });
-    });
+    }
 </script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
