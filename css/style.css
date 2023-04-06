@@ -9,18 +9,13 @@
   z-index: 1;
 }
 #large-header {
-  background-image: url("assets/IrM.gif");
+  background-image: url("../assets/IrM.gif");
 }
 .main-title {
-  position: absolute;
-  margin: 0;
-  padding: 0;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   color: #f9f1e9;
   text-align: center;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
 }
 .demo-1 .main-title {
   text-transform: uppercase;
@@ -41,17 +36,13 @@
   padding: 0;
   color: #f9f1e9;
   text-align: center;
-  top: 30%;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, -15%, 0);
-  transform: translate3d(-50%, -15%, 0);
 }
-.room {
-  display: inline-block;
-  vertical-align: top; /* чтобы выровнять по верху */
-  margin: 20px;
-  padding: 20px;
-}
+/*.room {*/
+/*  display: inline-block;*/
+/*  vertical-align: top; !* чтобы выровнять по верху *!*/
+/*  margin: 20px;*/
+/*  padding: 20px;*/
+/*}*/
 .room-name {
   font-size: 24px;
   font-weight: bold;
@@ -59,7 +50,7 @@
 }
 
 .switch {
-  display: inline-block;
+  /*display: inline-block;*/
   height: 28px;
   position: relative;
   width: 52px;
