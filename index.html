@@ -25,7 +25,6 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            onclick="renderCollapseOne('collapseOne')"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Первый этаж
                     </button>
@@ -101,7 +100,6 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            onclick="renderCollapseOne('collapseTwo')"
                             data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         Второй этаж
                     </button>
@@ -163,16 +161,6 @@
         switches.forEach(function (switchEl) {
             switchEl.checked = false;
         });
-    }
-    function renderCollapseOne(collapseId){
-        const coolapse = document.getElementById(collapseId);
-        const canvas = document.getElementById('large-header');
-        console.log(coolapse.clientHeight)
-        if(!coolapse.clientHeight){
-            canvas.style.height=`${coolapse.scrollHeight + canvas.scrollHeight}px`;
-        }else{
-            canvas.style.height=`${canvas.scrollHeight - coolapse.scrollHeight}px`;
-        }
     }
 </script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
